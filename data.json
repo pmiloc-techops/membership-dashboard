@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T01:54:12.720Z",
+  "updated": "2026-09-15T02:01:09.283Z",
   "stats": [
     {
       "order": 1,
@@ -11,22 +11,6 @@
     },
     {
       "order": 2,
-      "label": "New Members This Year",
-      "metric": "New Members This Year",
-      "value": 2266,
-      "color": "Orange",
-      "active": true
-    },
-    {
-      "order": 3,
-      "label": "New Members This Month",
-      "metric": "New Members This Month",
-      "value": 50,
-      "color": "Cyan",
-      "active": true
-    },
-    {
-      "order": 4,
       "label": "Members With Certification",
       "metric": "Members With Certification",
       "value": 6328,
@@ -34,35 +18,19 @@
       "active": true
     },
     {
-      "order": 5,
-      "label": "Members Since 20+ Years",
-      "metric": "20+ Years",
-      "value": 216,
-      "color": "Purple",
-      "active": true
-    },
-    {
-      "order": 6,
-      "label": "Members Since 15+ Years",
-      "metric": "15–19 Years",
-      "value": 437,
+      "order": 3,
+      "label": "New Members This Year",
+      "metric": "New Members This Year",
+      "value": 2266,
       "color": "Orange",
       "active": true
     },
     {
-      "order": 7,
-      "label": "Members Since 10+ Years",
-      "metric": "10–14 Years",
-      "value": 566,
+      "order": 4,
+      "label": "New Members This Month",
+      "metric": "New Members This Month",
+      "value": 50,
       "color": "Cyan",
-      "active": true
-    },
-    {
-      "order": 8,
-      "label": "Members Since 5+ Years",
-      "metric": "5–9 Years",
-      "value": 749,
-      "color": "Black",
       "active": true
     },
     {
