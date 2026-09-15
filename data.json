@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T00:59:27.180Z",
+  "updated": "2026-09-15T01:54:12.720Z",
   "stats": [
     {
       "order": 1,
@@ -35,7 +35,7 @@
     },
     {
       "order": 5,
-      "label": "20+ Years",
+      "label": "Members Since 20+ Years",
       "metric": "20+ Years",
       "value": 216,
       "color": "Purple",
@@ -43,7 +43,7 @@
     },
     {
       "order": 6,
-      "label": "15–19 Years",
+      "label": "Members Since 15+ Years",
       "metric": "15–19 Years",
       "value": 437,
       "color": "Orange",
@@ -51,7 +51,7 @@
     },
     {
       "order": 7,
-      "label": "10–14 Years",
+      "label": "Members Since 10+ Years",
       "metric": "10–14 Years",
       "value": 566,
       "color": "Cyan",
@@ -59,18 +59,10 @@
     },
     {
       "order": 8,
-      "label": "5–9 Years",
+      "label": "Members Since 5+ Years",
       "metric": "5–9 Years",
       "value": 749,
       "color": "Black",
-      "active": true
-    },
-    {
-      "order": 9,
-      "label": "Less Than 5 Years",
-      "metric": "Less Than 5 Years",
-      "value": 6096,
-      "color": "Purple",
       "active": true
     },
     {
