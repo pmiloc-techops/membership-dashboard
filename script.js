@@ -60,17 +60,44 @@ function renderDashboard(stats) {
 
   container.innerHTML = '';
 
-  stats
+  const activeStats = stats
     .filter(stat => stat.active === true)
-    .sort((a, b) => a.order - b.order)
-    .forEach(stat => {
+    .sort((a, b) => a.order - b.order);
 
-      const card =
-        createStatCard(stat);
+  activeStats.forEach(stat => {
 
-      container.appendChild(card);
+    const card =
+      createStatCard(stat);
 
-    });
+    container.appendChild(card);
+
+  });
+
+  const remainder = activeStats.length % 4;
+
+  if (remainder !== 0) {
+
+    const cards = container.children;
+    const startIndex = activeStats.length - remainder;
+
+    if (remainder === 1) {
+
+      cards[startIndex].style.gridColumn = '2 / 4';
+
+    } else if (remainder === 2) {
+
+      cards[startIndex].style.gridColumn = '2';
+      cards[startIndex + 1].style.gridColumn = '3';
+
+    } else if (remainder === 3) {
+
+      cards[startIndex].style.gridColumn = '1 / 2';
+      cards[startIndex + 1].style.gridColumn = '2 / 3';
+      cards[startIndex + 2].style.gridColumn = '3 / 4';
+
+    }
+
+  }
 
 }
 
