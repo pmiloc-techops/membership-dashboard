@@ -36,6 +36,7 @@ h1 {
   justify-content: center;
 }
 
+
 /* -----------------------------------------
    Statistics Card
 ----------------------------------------- */
@@ -43,17 +44,12 @@ h1 {
 .stat-card {
   min-height: 165px;
   background: #f4f4f4;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   padding: 25px 15px;
-
-  border-radius: 0;
 }
 
 .stat-label {
@@ -93,6 +89,22 @@ h1 {
 
 .color-black {
   color: #000000;
+}
+
+/* -----------------------------------------
+   Last row
+----------------------------------------- */
+
+.last-row {
+  grid-column: span 1;
+}
+
+.stats-container {
+  --card-width: calc((100% - 114px) / 4);
+}
+
+.last-row:first-child {
+  margin-left: calc((100% - (var(--card-width) * 4) - 114px) / 2);
 }
 
 /* -----------------------------------------
