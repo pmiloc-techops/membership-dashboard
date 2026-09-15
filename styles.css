@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #36414a;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 30px 40px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0 0 45px;
+  color: #36414a;
+}
+
+/* -----------------------------------------
+   Statistics Grid
+----------------------------------------- */
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px;
+  justify-content: center;
+}
+
+/* -----------------------------------------
+   Statistics Card
+----------------------------------------- */
+
+.stat-card {
+  min-height: 165px;
+  background: #f4f4f4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 25px 15px;
+
+  border-radius: 0;
+}
+
+.stat-label {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 400;
+
+  margin-bottom: 25px;
+
+  color: #36414a;
+}
+
+.stat-value {
+  font-size: 40px;
+  line-height: 1;
+
+  font-weight: 700;
+
+  min-height: 40px;
+}
+
+/* -----------------------------------------
+   Approved PMI Colors
+----------------------------------------- */
+
+.color-purple {
+  color: #4f17a8;
+}
+
+.color-orange {
+  color: #ff6110;
+}
+
+.color-cyan {
+  color: #0bbfe0;
+}
+
+.color-black {
+  color: #000000;
+}
+
+/* -----------------------------------------
+   Responsive
+----------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  .stats-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .dashboard {
+    padding: 10px 20px 30px;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .stat-card {
+    min-height: 145px;
+  }
+
+  .stat-label {
+    font-size: 18px;
+  }
+
+  .stat-value {
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .stat-card {
+    min-height: 135px;
+  }
+
+}
