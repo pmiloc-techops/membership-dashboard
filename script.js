@@ -73,6 +73,12 @@ function renderDashboard(stats) {
 
   });
 
+  /*
+    Watch cards and start their animation
+    when they enter the viewport.
+  */
+  observeStatCards();
+
 }
 
 
@@ -86,6 +92,11 @@ function createStatCard(stat) {
     document.createElement('div');
 
   card.className = 'stat-card';
+
+  /*
+    Store the final value on the card.
+  */
+  card.dataset.value = Number(stat.value);
 
 
   const label =
@@ -108,7 +119,7 @@ function createStatCard(stat) {
     );
 
   /*
-    Start at 1 as requested.
+    Start at 1, but DO NOT animate yet.
   */
   value.textContent = '1';
 
@@ -116,17 +127,79 @@ function createStatCard(stat) {
   card.appendChild(label);
   card.appendChild(value);
 
+  return card;
+
+}
+
+
+/* -----------------------------------------
+   Observe Cards
+----------------------------------------- */
+
+function observeStatCards() {
+
+  const cards =
+    document.querySelectorAll('.stat-card');
 
   /*
-    Start number animation
+    Trigger when approximately 20% of the
+    card becomes visible.
   */
-  animateNumber(
-    value,
-    Number(stat.value)
-  );
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            const card =
+              entry.target;
+
+            /*
+              Prevent the same card from
+              animating more than once.
+            */
+            if (
+              card.dataset.animated === 'true'
+            ) {
+              return;
+            }
+
+            card.dataset.animated = 'true';
+
+            const valueElement =
+              card.querySelector('.stat-value');
+
+            const target =
+              Number(card.dataset.value);
+
+            animateNumber(
+              valueElement,
+              target
+            );
+
+            /*
+              Stop observing this card.
+            */
+            observer.unobserve(card);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.2
+      }
+    );
 
 
-  return card;
+  cards.forEach(card => {
+
+    observer.observe(card);
+
+  });
 
 }
 
@@ -141,7 +214,7 @@ function animateNumber(element, target) {
 
   /*
     If the final value is 0,
-    display 0 rather than animate.
+    display 0 directly.
   */
   if (target <= 0) {
 
@@ -172,9 +245,6 @@ function animateNumber(element, target) {
 
     /*
       Ease-out animation.
-
-      Starts quickly and gradually
-      slows down toward the final number.
     */
     const easedProgress =
       1 - Math.pow(1 - progress, 3);
@@ -232,7 +302,6 @@ function showError() {
     'Membership statistics are currently unavailable.';
 
   message.style.textAlign = 'center';
-  message.style.gridColumn = '1 / -1';
   message.style.padding = '40px';
   message.style.fontSize = '18px';
 
