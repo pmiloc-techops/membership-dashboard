@@ -1,11 +1,11 @@
 {
-  "updated": "2026-09-28T13:57:03.419Z",
+  "updated": "2026-09-29T13:56:06.665Z",
   "stats": [
     {
       "order": 1,
       "label": "Total Active Members",
       "metric": "Total Active Members",
-      "value": 8135,
+      "value": 8144,
       "color": "Purple",
       "active": true
     },
@@ -13,7 +13,7 @@
       "order": 2,
       "label": "Members With Certification",
       "metric": "Members With Certification",
-      "value": 6369,
+      "value": 6377,
       "color": "Black",
       "active": true
     },
@@ -21,7 +21,7 @@
       "order": 3,
       "label": "New Members This Year",
       "metric": "New Members This Year",
-      "value": 2325,
+      "value": 2332,
       "color": "Orange",
       "active": true
     },
@@ -29,7 +29,7 @@
       "order": 4,
       "label": "New Members This Month",
       "metric": "New Members This Month",
-      "value": 108,
+      "value": 115,
       "color": "Cyan",
       "active": true
     },
@@ -37,7 +37,7 @@
       "order": 10,
       "label": "PMP",
       "metric": "PMP",
-      "value": 6169,
+      "value": 6176,
       "color": "Orange",
       "active": true
     },
@@ -45,7 +45,7 @@
       "order": 11,
       "label": "CAPM",
       "metric": "CAPM",
-      "value": 254,
+      "value": 256,
       "color": "Cyan",
       "active": true
     },
@@ -69,7 +69,7 @@
       "order": 14,
       "label": "PgMP",
       "metric": "PgMP",
-      "value": 50,
+      "value": 51,
       "color": "Orange",
       "active": true
     },
