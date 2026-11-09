@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-08T14:56:52.057Z",
+  "updated": "2026-11-09T14:56:04.065Z",
   "stats": [
     {
       "order": 1,
       "label": "Total Active Members",
       "metric": "Total Active Members",
-      "value": 7924,
+      "value": 7928,
       "color": "Purple",
       "active": true
     },
@@ -13,7 +13,7 @@
       "order": 2,
       "label": "Members With Certification",
       "metric": "Members With Certification",
-      "value": 6207,
+      "value": 6210,
       "color": "Black",
       "active": true
     },
@@ -21,7 +21,7 @@
       "order": 3,
       "label": "New Members This Year",
       "metric": "New Members This Year",
-      "value": 2486,
+      "value": 2490,
       "color": "Orange",
       "active": true
     },
@@ -29,7 +29,7 @@
       "order": 4,
       "label": "New Members This Month",
       "metric": "New Members This Month",
-      "value": 27,
+      "value": 31,
       "color": "Cyan",
       "active": true
     },
@@ -37,7 +37,7 @@
       "order": 10,
       "label": "PMP",
       "metric": "PMP",
-      "value": 6014,
+      "value": 6019,
       "color": "Orange",
       "active": true
     },
@@ -45,7 +45,7 @@
       "order": 11,
       "label": "CAPM",
       "metric": "CAPM",
-      "value": 242,
+      "value": 241,
       "color": "Cyan",
       "active": true
     },
@@ -53,7 +53,7 @@
       "order": 12,
       "label": "PMI-ACP",
       "metric": "PMI-ACP",
-      "value": 231,
+      "value": 232,
       "color": "Black",
       "active": true
     },
